@@ -263,7 +263,9 @@ class BaseView(QMainWindow, Ui_BaseViewWindow):
 
     def create_trees(self):
         for tree_name, coll_name in self.tree_collection_dict.items():
-            show_name = tree_name.removesuffix("Widget")
+            # AP
+            suffix = "Widget"
+            show_name = tree_name[:-len(suffix)]#.removesuffix("Widget")
             page_name = show_name + "Page"
             layout_name = show_name + "Layout"
             collection = eval(f"self.parent.{coll_name}")

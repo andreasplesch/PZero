@@ -759,25 +759,25 @@ class View3D(ViewVTK):
     def export_gltf(self):
         out_file_name = save_file_dialog(
             parent=self, caption="Export 3D view as GLTF.", filter="gltf (*.gltf)"
-        ).removesuffix(".gltf")
+        )#.removesuffix(".gltf")
         self.plotter.export_gltf(f"{out_file_name}.gltf")
 
     def export_html(self):
         out_file_name = save_file_dialog(
             parent=self, caption="Export 3D view as HTML.", filter="html (*.html)"
-        ).removesuffix(".html")
+        )#.removesuffix(".html")
         self.plotter.export_html(f"{out_file_name}.html")
 
     def export_vtksz(self):
         out_file_name = save_file_dialog(
             parent=self, caption="Export 3D view as VTKsz.", filter="zip (*.zip)"
-        ).removesuffix(".zip")
+        )#.removesuffix(".zip")
         self.plotter.export_vtksz(f"{out_file_name}.zip", format="zip")
 
     def export_vtkJS(self):
         out_file_name = save_file_dialog(
             parent=self, caption="Export 3D view as VTKsz.", filter="zip (*.zip)"
-        ).removesuffix(".zip")
+        )#.removesuffix(".zip")
 
         self.plotter.clear_camera_widgets()
         exporter = vtkJSONSceneExporter()
@@ -792,7 +792,7 @@ class View3D(ViewVTK):
     def export_obj(self):
         out_file_name = save_file_dialog(
             parent=self, caption="Export 3D view as OBJ.", filter="obj (*.obj)"
-        ).removesuffix(".obj")
+        )#.removesuffix(".obj")
         self.plotter.export_obj(f"{out_file_name}.obj")
 
     def show_mesh_slicer_dialog(self):
